@@ -1,0 +1,22 @@
+/* index.css */
+@import "tailwindcss";
+
+/* make `dark:` respond to .dark on <html> */
+@custom-variant dark (&:where(.dark, .dark *));  /* <-- add this line */
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+.clip-triangle {
+  clip-path: polygon(0 100%, 100% 0, 100% 100%);
+}
+.swiper-pagination-bullet {
+  background-color: #004B93 !important;
+  opacity: 0.4;
+}
+.swiper-pagination-bullet-active {
+  background-color: #004B93 !important;
+  opacity: 1 !important;
+}
