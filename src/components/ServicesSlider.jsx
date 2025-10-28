@@ -17,13 +17,13 @@ const services = [
     id: 1,
     title: 'Diagnostics',
     icon: <FaTachometerAlt className="text-[#004B93] text-3xl relative z-10" />,
-    image: '/Audi SQ5 3.0tfsi.jpeg',
+    image: '/Audi A4 2.0tdi.jpeg',
   },
   {
     id: 2,
     title: 'Servicing & Repairs',
     icon: <FaTools className="text-[#004B93] text-3xl relative z-10" />,
-    image: '/Honda Civic.jpeg',
+    image: '/Audi RS4.jpeg',
   },
   {
     id: 3,
@@ -41,7 +41,7 @@ const services = [
     id: 5,
     title: 'OBD Tuning',
     icon: <FaPlug className="text-[#004B93] text-3xl relative z-10" />,
-    image: '/Honda Civic.jpeg',
+    image: '/Audi A4 2.0tdi.jpeg',
   },
   {
     id: 6,
@@ -53,7 +53,7 @@ const services = [
     id: 7,
     title: 'Carbon Cleaning',
     icon: <FaFan className="text-[#004B93] text-3xl relative z-10" />,
-    image: '/BMW X6 3.0d.jpeg',
+    image: '/Vauxhall Astra 1.4t.jpeg',
   },
 ];
 
