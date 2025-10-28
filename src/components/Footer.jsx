@@ -31,20 +31,6 @@ const Footer = () => {
             >
               <FaFacebookF />
             </a>
-            <a
-              href="#"
-              className="p-2 bg-[#004B93] hover:bg-[#00376C] rounded-full text-white transition"
-              aria-label="Instagram"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="#"
-              className="p-2 bg-[#004B93] hover:bg-[#00376C] rounded-full text-white transition"
-              aria-label="YouTube"
-            >
-              <FaYoutube />
-            </a>
           </div>
         </div>
 
