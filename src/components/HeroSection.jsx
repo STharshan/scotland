@@ -35,11 +35,11 @@ const Hero = () => {
         data-aos="fade-up"
       >
         <h1
-          className="text-3xl md:text-6xl font-extrabold uppercase tracking-wide"
+          className="text-2xl md:text-4xl font-extrabold uppercase tracking-wide"
           data-aos="zoom-in"
           data-aos-delay="200"
         >
-          Precision tuning for drivers who demand more power, sharper response, and next-level performance.
+          Precision tuning for drivers who demand more power, sharper response, and next-level performance
         </h1>
       </div>
 
