@@ -46,7 +46,7 @@ const Hero = () => {
           data-aos="fade-up"
           data-aos-delay="400"
         >
-          WordPress Theme
+          Precision tuning for drivers who demand more power, sharper response, and next-level performance.
         </p>
       </div>
 
