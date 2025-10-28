@@ -39,15 +39,8 @@ const Hero = () => {
           data-aos="zoom-in"
           data-aos-delay="200"
         >
-          Car Detailing, Shop & Repair
-        </h1>
-        <p
-          className="text-2xl md:text-4xl font-bold text-gray-300 mt-3 tracking-wider"
-          data-aos="fade-up"
-          data-aos-delay="400"
-        >
           Precision tuning for drivers who demand more power, sharper response, and next-level performance.
-        </p>
+        </h1>
       </div>
 
       {/* Scroll Down */}
