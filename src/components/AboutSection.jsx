@@ -44,9 +44,7 @@ const AboutTuneItScotland = () => {
             data-aos="fade-up"
             data-aos-delay="300"
           >
-            For decades, Tune It Scotland has been at the heart of the car scene — known for
-            precision tuning, honest service, and a genuine passion for performance. We’ve built
-            a strong reputation across Scotland by helping drivers unlock their car’s true potential.
+           Tune It Scotland has been a trusted name in the car scene for 6–7 years — known for precision tuning, honest service, and a genuine passion for performance. In that time, we’ve built a strong reputation across Scotland by helping drivers unlock their car’s true potential.
           </p>
 
           {/* Experience & Professional Block */}

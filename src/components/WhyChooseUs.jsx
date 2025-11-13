@@ -65,12 +65,10 @@ const WhyChooseUs = () => {
             data-aos-delay="200"
           >
             <h3 className="text-lg md:text-2xl font-bold">
-              Book Your Free Vehicle Health Check
+                Book Your Car Tuning Appointment
             </h3>
             <p className="text-xs md:text-base mt-3 text-blue-100 dark:text-blue-200 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-              We’ll assess your car’s performance, identify any hidden issues, and
-              give you expert advice — free of charge. Our goal is to help you
-              understand your car better and keep it running at its best.
+              Get your vehicle tuned for maximum performance, improved responsiveness, and smoother driving. Our experts will fine-tune your car to bring out its full potential — book now to experience the difference.
             </p>
           </div>
         </div>
