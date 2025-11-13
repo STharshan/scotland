@@ -6,7 +6,7 @@ import TermsConditions from "./components/Term";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import GDPRConsent from "./components/GDPRButton";
 import ScrollToTop from "./components/ScrollToTop";
-
+import Diagnostics from "./page/Diagnostics";
 function App() {
   return (
     <Router>
@@ -16,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/terms" element={<TermsConditions />} />
         <Route path="/privacy" element={<PrivacyPolicy />} />
+         <Route path="/diagnostics" element={<Diagnostics />} />
       </Routes>
       <Footer />
       <GDPRConsent />
