@@ -9,7 +9,7 @@ const FindUs = () => {
     AOS.init({
       duration: 1000,
       offset: 120,
-      once: false, // ✅ animations trigger both up and down
+      once: false,
       mirror: true,
       easing: 'ease-in-out',
     });
@@ -17,32 +17,34 @@ const FindUs = () => {
 
   return (
     <section
-      className="bg-gray-50 dark:bg-neutral-900 py-20 transition-colors duration-500"
+      className="relative bg-gray-50 dark:bg-black py-20 transition-colors duration-500"
       id="contact"
     >
       <div className="max-w-6xl mx-auto px-6 text-center">
+
         {/* Heading */}
-        <div
-          className="flex flex-col items-center mb-10"
-          data-aos="fade-down"
-        >
-          <FaMapMarkerAlt className="text-[#004B93] dark:text-[#66A8FF] text-4xl mb-3" />
-          <h2 className="text-3xl md:text-5xl font-extrabold text-[#2B2B2B] dark:text-white">
+        <div className="flex flex-col items-center mb-10" data-aos="fade-down">
+          <FaMapMarkerAlt className="text-[#143B69] text-4xl mb-3 drop-shadow-[0_0_8px_#143B69]" />
+
+          <h2 className="text-3xl md:text-5xl font-extrabold text-[#29292A] dark:text-white">
             Find Us
           </h2>
+
           <p
-            className="text-[#555] dark:text-gray-300 mt-3 text-lg max-w-2xl"
+            className="text-[#454546] dark:text-[#777676] mt-3 text-lg max-w-2xl"
             data-aos="fade-up"
             data-aos-delay="200"
           >
             Tune-it Scotland, Unit B8, 15 Carmyle Ave, Glasgow G32 8HL, United Kingdom
           </p>
-          <div className="mt-4 w-24 h-[3px] bg-[#004B93] dark:bg-[#005BBB] rounded-full"></div>
+
+          {/* Blue underline */}
+          <div className="mt-4 w-24 h-[3px] bg-[#143B69] rounded-full shadow-[0_0_12px_#143B69]"></div>
         </div>
 
         {/* Google Map */}
         <div
-          className="rounded-xl overflow-hidden shadow-lg border border-[#d9e2ec] dark:border-neutral-700"
+          className="rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-[#29292A]"
           data-aos="zoom-in-up"
           data-aos-delay="300"
         >
@@ -54,14 +56,14 @@ const FindUs = () => {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            className="w-full h-[450px] md:h-[500px] dark:invert-[90%] dark:brightness-90 rounded-xl"
+            className="w-full h-[450px] md:h-[500px] rounded-xl dark:invert-[90%] dark:brightness-90"
           ></iframe>
         </div>
       </div>
 
-      {/* Decorative Glow (Optional) */}
-      <div className="absolute top-10 left-10 w-[300px] h-[300px] bg-[#004B93]/10 dark:bg-[#005BBB]/10 blur-[120px] rounded-full -z-10"></div>
-      <div className="absolute bottom-10 right-10 w-[300px] h-[300px] bg-[#004B93]/10 dark:bg-[#005BBB]/10 blur-[120px] rounded-full -z-10"></div>
+      {/* Blue Glow Orbs */}
+      <div className="absolute top-10 left-10 w-[300px] h-[300px] bg-[#143B69]/15 blur-[120px] rounded-full -z-10"></div>
+      <div className="absolute bottom-10 right-10 w-[300px] h-[300px] bg-[#143B69]/15 blur-[120px] rounded-full -z-10"></div>
     </section>
   );
 };
