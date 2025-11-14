@@ -6,13 +6,13 @@ import ReviewsSection from "../components/ReviewsSection"
 import WhyChooseUs from "../components/WhyChooseUs"
 import GallerySlider from "../components/GallerySlider"
 import ContactSection from "../components/ContactSection"
-
+import Diagnostics from "../page/Diagnostics";
 const Home = () => {
     return (
         <div>
             <HeroSection />
             <About />
-            <ServicesSlider />
+            <Diagnostics />
             <WhyChooseUs />
             <GallerySlider />
             <ReviewsSection />
