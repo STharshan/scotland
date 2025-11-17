@@ -45,7 +45,7 @@ const GallerySection = () => {
           </p>
 
           {/* Blue Accent Line */}
-          <div className="mt-4 w-24 h-[3px] bg-[#143B69] mx-auto rounded-full shadow-[0_0_12px_#143B69]"></div>
+          <div className="mt-4 w-24 h-[3px] bg-[#1338BE] mx-auto rounded-full shadow-[0_0_12px_#1338BE]"></div>
         </div>
 
         {/* Circular Gallery Component */}
@@ -72,10 +72,10 @@ const GallerySection = () => {
 
       {/* Blue Glow Orbs */}
       <div className="absolute top-0 left-0 w-[400px] h-[400px] 
-                      bg-[#143B69]/15 blur-[130px] rounded-full -z-10"></div>
+                      bg-[#1338BE]/15 blur-[130px] rounded-full -z-10"></div>
 
       <div className="absolute bottom-0 right-0 w-[400px] h-[400px] 
-                      bg-[#143B69]/15 blur-[130px] rounded-full -z-10"></div>
+                      bg-[#1338BE]/15 blur-[130px] rounded-full -z-10"></div>
     </section>
   );
 };

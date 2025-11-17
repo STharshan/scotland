@@ -19,20 +19,20 @@ export default function ExtraServicesOffered() {
       title: "Diagnostic",
       desc: "Advanced diagnostic services to identify and resolve vehicle issues with precision",
       icon: (
-        <Settings className="h-8 w-8 text-[#143B69] drop-shadow-[0_0_6px_#143B69]" />
+        <Settings className="h-8 w-8 text-[#1338BE] drop-shadow-[0_0_6px_#1338BE]" />
       ),
     },
     {
       title: "Servicing & Repairs",
       desc: "Comprehensive servicing and repair solutions to keep your vehicle running smoothly",
       icon: (
-        <Wrench className="h-8 w-8 text-[#143B69] drop-shadow-[0_0_6px_#143B69]" />
+        <Wrench className="h-8 w-8 text-[#1338BE] drop-shadow-[0_0_6px_#1338BE]" />
       ),
     },
     {
       title: "Key Cutting",
       desc: "Professional key cutting and programming services for all vehicle makes and models",
-      icon: <Key className="h-8 w-8 text-[#143B69] drop-shadow-[0_0_6px_#143B69]" />,
+      icon: <Key className="h-8 w-8 text-[#1338BE] drop-shadow-[0_0_6px_#1338BE]" />,
     },
   ];
 
@@ -61,9 +61,9 @@ export default function ExtraServicesOffered() {
                   ${
                     isMobile
                       ? isActive
-                        ? "border-[#143B69]/70 shadow-[0_0_18px_#143B69]/60"
+                        ? "border-[#1338BE]/70 shadow-[0_0_18px_#1338BE]/60"
                         : "border-[#29292A]"
-                      : "border-[#29292A] hover:border-[#143B69]/60 hover:shadow-[0_0_18px_#143B69]/40"
+                      : "border-[#29292A] hover:border-[#1338BE]/60 hover:shadow-[0_0_18px_#1338BE]/40"
                   }`}
               >
                 {/* Blue hover gradient background */}
@@ -84,9 +84,9 @@ export default function ExtraServicesOffered() {
                     ${
                       isMobile
                         ? isActive
-                          ? "bg-[#143B69]/20"
-                          : "bg-[#143B69]/15"
-                        : "bg-[#143B69]/15 group-hover:bg-[#143B69]/25"
+                          ? "bg-[#1338BE]/20"
+                          : "bg-[#1338BE]/15"
+                        : "bg-[#1338BE]/15 group-hover:bg-[#1338BE]/25"
                     }`}
                 >
                   {item.icon}
@@ -98,9 +98,9 @@ export default function ExtraServicesOffered() {
                     ${
                       isMobile
                         ? isActive
-                          ? "text-[#143B69]"
+                          ? "text-[#1338BE]"
                           : "text-white"
-                        : "text-white group-hover:text-[#143B69]"
+                        : "text-white group-hover:text-[#1338BE]"
                     }`}
                 >
                   {item.title}

@@ -27,8 +27,8 @@ const AboutTuneItScotland = () => {
           
           {/* Label */}
           <div className="flex items-center gap-2" data-aos="fade-down" data-aos-delay="100">
-            <FaCarSide className="text-[#143B69] text-xl" />
-            <span className="text-[#143B69] font-semibold uppercase tracking-wide text-sm">
+            <FaCarSide className="text-[#1338BE] text-xl" />
+            <span className="text-[#1338BE] font-semibold uppercase tracking-wide text-sm">
               About Tune It Scotland
             </span>
           </div>
@@ -55,7 +55,7 @@ const AboutTuneItScotland = () => {
           {/* Experience Block */}
           <div className="flex items-start gap-4 mt-6" data-aos="fade-up" data-aos-delay="400">
             <div className="flex-shrink-0">
-              <FaCogs className="text-[#143B69] text-3xl" />
+              <FaCogs className="text-[#1338BE] text-3xl" />
             </div>
             <div>
               <h4 className="font-semibold text-lg text-[#29292A] dark:text-white">
@@ -71,7 +71,7 @@ const AboutTuneItScotland = () => {
 
           {/* Button */}
           <button
-            className="flex items-center gap-2 bg-[#143B69] hover:bg-[#0E2A4D] 
+            className="flex items-center gap-2 bg-[#1338BE] hover:bg-[#0E2A4D] 
                        text-white font-semibold uppercase px-6 py-3 rounded-md mt-6 
                        transition-all duration-300"
             data-aos="fade-up"
@@ -100,7 +100,7 @@ const AboutTuneItScotland = () => {
             />
 
             {/* Blue Corner Accent */}
-            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-[#143B69] -z-10 clip-triangle"></div>
+            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-[#1338BE] -z-10 clip-triangle"></div>
           </div>
 
           {/* Overlapping Secondary Image */}

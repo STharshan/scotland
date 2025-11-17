@@ -18,7 +18,7 @@ export default function StageOneRemapping() {
     if (isMobile) setActiveIndex(activeIndex === index ? null : index);
   };
 
-  const BLUE = "#143B69";
+  const BLUE = "#1338BE";
 
   return (
     <section className="bg-black py-24 px-4 sm:px-6 lg:px-8">
@@ -27,8 +27,8 @@ export default function StageOneRemapping() {
         <div className="mb-16 text-center">
           <span
             className="inline-flex items-center justify-center rounded-md border px-2 py-0.5 
-              text-xs font-medium bg-[#143B69]/15 text-[#143B69] border-[#143B69]/30 mb-4
-              shadow-[0_0_8px_#143B69]/40"
+              text-xs font-medium bg-[#1338BE]/15 text-[#1338BE] border-[#1338BE]/30 mb-4
+              shadow-[0_0_8px_#1338BE]/40"
           >
             Stage 1 Remapping
           </span>
@@ -115,9 +115,9 @@ function Card({
         ${
           isMobile
             ? isActive
-              ? "border-[#143B69]/70 shadow-[0_0_25px_#143B69]/60"
+              ? "border-[#1338BE]/70 shadow-[0_0_25px_#1338BE]/60"
               : "border-[#29292A]"
-            : "border-[#29292A] hover:border-[#143B69]/50 hover:shadow-[0_0_25px_#143B69]/40"
+            : "border-[#29292A] hover:border-[#1338BE]/50 hover:shadow-[0_0_25px_#1338BE]/40"
         }`}
     >
       {/* Glow gradient background */}
@@ -140,13 +140,13 @@ function Card({
               ${
                 isMobile
                   ? isActive
-                    ? "bg-[#143B69]/25"
-                    : "bg-[#143B69]/15"
-                  : "bg-[#143B69]/15 group-hover:bg-[#143B69]/25"
+                    ? "bg-[#1338BE]/25"
+                    : "bg-[#1338BE]/15"
+                  : "bg-[#1338BE]/15 group-hover:bg-[#1338BE]/25"
               }`}
           >
             {React.cloneElement(icon, {
-              className: "w-7 h-7 text-[#143B69] drop-shadow-[0_0_6px_#143B69]",
+              className: "w-7 h-7 text-[#1338BE] drop-shadow-[0_0_6px_#1338BE]",
             })}
           </div>
 
@@ -155,9 +155,9 @@ function Card({
               ${
                 isMobile
                   ? isActive
-                    ? "text-[#143B69]"
+                    ? "text-[#1338BE]"
                     : "text-white"
-                  : "text-white group-hover:text-[#143B69]"
+                  : "text-white group-hover:text-[#1338BE]"
               }`}
           >
             {title}
@@ -199,8 +199,8 @@ function Card({
 function BenefitItem({ icon, text }) {
   return (
     <div className="flex items-start gap-3">
-      <div className="w-5 h-5 rounded-full flex items-center justify-center mt-0.5 shrink-0 bg-[#143B69]/15">
-        {React.cloneElement(icon, { className: "w-3 h-3 text-[#143B69]" })}
+      <div className="w-5 h-5 rounded-full flex items-center justify-center mt-0.5 shrink-0 bg-[#1338BE]/15">
+        {React.cloneElement(icon, { className: "w-3 h-3 text-[#1338BE]" })}
       </div>
       <span className="text-[#E5E5E5]">{text}</span>
     </div>
@@ -210,7 +210,7 @@ function BenefitItem({ icon, text }) {
 function PerfectForItem({ text }) {
   return (
     <div className="flex items-start gap-3">
-      <div className="w-1.5 h-1.5 rounded-full bg-[#143B69] mt-2 shrink-0"></div>
+      <div className="w-1.5 h-1.5 rounded-full bg-[#1338BE] mt-2 shrink-0"></div>
       <span className="text-[#777676]">{text}</span>
     </div>
   );

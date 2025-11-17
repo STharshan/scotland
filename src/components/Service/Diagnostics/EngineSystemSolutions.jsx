@@ -15,13 +15,13 @@ export default function EngineSystemSolutions() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
-  const BLUE = "#143B69";
+  const BLUE = "#1338BE";
 
   const solutions = [
     {
       title: "DPF System Support",
       icon: (
-        <CircleAlert className="w-7 h-7 text-[#143B69] drop-shadow-[0_0_6px_#143B69]" />
+        <CircleAlert className="w-7 h-7 text-[#1338BE] drop-shadow-[0_0_6px_#1338BE]" />
       ),
       items: [
         "Diagnose blocked filters",
@@ -32,7 +32,7 @@ export default function EngineSystemSolutions() {
     {
       title: "EGR System Solutions",
       icon: (
-        <Activity className="w-7 h-7 text-[#143B69] drop-shadow-[0_0_6px_#143B69]" />
+        <Activity className="w-7 h-7 text-[#1338BE] drop-shadow-[0_0_6px_#1338BE]" />
       ),
       items: [
         "Identify faults",
@@ -43,7 +43,7 @@ export default function EngineSystemSolutions() {
     {
       title: "AdBlue / SCR Assistance",
       icon: (
-        <Gauge className="w-7 h-7 text-[#143B69] drop-shadow-[0_0_6px_#143B69]" />
+        <Gauge className="w-7 h-7 text-[#1338BE] drop-shadow-[0_0_6px_#1338BE]" />
       ),
       items: [
         "Fix system errors",
@@ -54,7 +54,7 @@ export default function EngineSystemSolutions() {
     {
       title: "ECU & Sensor Diagnostics",
       icon: (
-        <Wrench className="w-7 h-7 text-[#143B69] drop-shadow-[0_0_6px_#143B69]" />
+        <Wrench className="w-7 h-7 text-[#1338BE] drop-shadow-[0_0_6px_#1338BE]" />
       ),
       items: [
         "Advanced fault tracing",
@@ -94,9 +94,9 @@ export default function EngineSystemSolutions() {
                   ${
                     isMobile
                       ? isActive
-                        ? "border-[#143B69]/70 shadow-[0_0_20px_#143B69]/60"
+                        ? "border-[#1338BE]/70 shadow-[0_0_20px_#1338BE]/60"
                         : ""
-                      : "hover:border-[#143B69]/50 hover:shadow-[0_0_20px_#143B69]/40"
+                      : "hover:border-[#1338BE]/50 hover:shadow-[0_0_20px_#1338BE]/40"
                   }`}
               >
                 {/* Top glow bar */}
@@ -105,9 +105,9 @@ export default function EngineSystemSolutions() {
                     ${
                       isMobile
                         ? isActive
-                          ? "opacity-100 bg-gradient-to-r from-[#0E2A4D] to-[#143B69]"
+                          ? "opacity-100 bg-gradient-to-r from-[#0E2A4D] to-[#1338BE]"
                           : "opacity-0"
-                        : "opacity-0 group-hover:opacity-100 bg-gradient-to-r from-[#0E2A4D] to-[#143B69]"
+                        : "opacity-0 group-hover:opacity-100 bg-gradient-to-r from-[#0E2A4D] to-[#1338BE]"
                     }`}
                 ></div>
 
@@ -118,9 +118,9 @@ export default function EngineSystemSolutions() {
                     ${
                       isMobile
                         ? isActive
-                          ? "bg-[#143B69]/10"
+                          ? "bg-[#1338BE]/10"
                           : "bg-[#1a1a1a]"
-                        : "bg-[#1a1a1a] group-hover:bg-[#143B69]/10"
+                        : "bg-[#1a1a1a] group-hover:bg-[#1338BE]/10"
                     }`}
                   >
                     {sol.icon}
@@ -133,9 +133,9 @@ export default function EngineSystemSolutions() {
                   ${
                     isMobile
                       ? isActive
-                        ? "text-[#143B69]"
+                        ? "text-[#1338BE]"
                         : "text-white"
-                      : "text-white group-hover:text-[#143B69]"
+                      : "text-white group-hover:text-[#1338BE]"
                   }`}
                 >
                   {sol.title}
@@ -145,7 +145,7 @@ export default function EngineSystemSolutions() {
                 <ul className="space-y-3">
                   {sol.items.map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <div className="w-1.5 h-1.5 rounded-full bg-[#143B69] mt-2 shrink-0"></div>
+                      <div className="w-1.5 h-1.5 rounded-full bg-[#1338BE] mt-2 shrink-0"></div>
                       <span className="text-[#777676] leading-relaxed">{item}</span>
                     </li>
                   ))}

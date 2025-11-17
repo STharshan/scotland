@@ -12,7 +12,7 @@ import {
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-const BLUE = "#143B69";       // Tune-In Scotland Blue
+const BLUE = "#1338BE";       // Tune-In Scotland Blue
 const DARK_GREY = "#29292A";
 const MID_GREY = "#454546";
 const LIGHT_GREY = "#777676";
@@ -21,43 +21,43 @@ const services = [
   {
     id: 1,
     title: 'Diagnostics',
-    icon: <FaTachometerAlt className="text-[#143B69] drop-shadow-[0_0_6px_#143B69] text-3xl relative z-10" />,
+    icon: <FaTachometerAlt className="text-[#1338BE] drop-shadow-[0_0_6px_#1338BE] text-3xl relative z-10" />,
     image: '/Audi A4 2.0tdi.jpeg',
   },
   {
     id: 2,
     title: 'Servicing & Repairs',
-    icon: <FaTools className="text-[#143B69] drop-shadow-[0_0_6px_#143B69] text-3xl relative z-10" />,
+    icon: <FaTools className="text-[#1338BE] drop-shadow-[0_0_6px_#1338BE] text-3xl relative z-10" />,
     image: '/Audi RS4.jpeg',
   },
   {
     id: 3,
     title: 'Key Cutting & Programming',
-    icon: <FaKey className="text-[#143B69] drop-shadow-[0_0_6px_#143B69] text-3xl relative z-10" />,
+    icon: <FaKey className="text-[#1338BE] drop-shadow-[0_0_6px_#1338BE] text-3xl relative z-10" />,
     image: '/Audi SQ5 3.0tfsi.jpeg',
   },
   {
     id: 4,
     title: 'Stage 1, DPF, Adblue & EGR',
-    icon: <FaCogs className="text-[#143B69] drop-shadow-[0_0_6px_#143B69] text-3xl relative z-10" />,
+    icon: <FaCogs className="text-[#1338BE] drop-shadow-[0_0_6px_#1338BE] text-3xl relative z-10" />,
     image: '/Honda Civic.jpeg',
   },
   {
     id: 5,
     title: 'OBD Tuning',
-    icon: <FaPlug className="text-[#143B69] drop-shadow-[0_0_6px_#143B69] text-3xl relative z-10" />,
+    icon: <FaPlug className="text-[#1338BE] drop-shadow-[0_0_6px_#1338BE] text-3xl relative z-10" />,
     image: '/Audi A4 2.0tdi.jpeg',
   },
   {
     id: 6,
     title: 'Bench Tuning',
-    icon: <FaCarBattery className="text-[#143B69] drop-shadow-[0_0_6px_#143B69] text-3xl relative z-10" />,
+    icon: <FaCarBattery className="text-[#1338BE] drop-shadow-[0_0_6px_#1338BE] text-3xl relative z-10" />,
     image: '/BMW X6 3.0d.jpeg',
   },
   {
     id: 7,
     title: 'Carbon Cleaning',
-    icon: <FaFan className="text-[#143B69] drop-shadow-[0_0_6px_#143B69] text-3xl relative z-10" />,
+    icon: <FaFan className="text-[#1338BE] drop-shadow-[0_0_6px_#1338BE] text-3xl relative z-10" />,
     image: '/Vauxhall Astra 1.4t.jpeg',
   },
 ];
@@ -82,7 +82,7 @@ const ServicesSection = () => {
 
         {/* Top Section */}
         <div data-aos="fade-down">
-          <h5 className="text-[#143B69] uppercase tracking-wide font-semibold text-sm drop-shadow-[0_0_8px_#143B69]">
+          <h5 className="text-[#1338BE] uppercase tracking-wide font-semibold text-sm drop-shadow-[0_0_8px_#1338BE]">
             Services
           </h5>
 
@@ -107,7 +107,7 @@ const ServicesSection = () => {
               data-aos="zoom-in-up"
               data-aos-delay={100 * index}
               className="group bg-transparent rounded-lg transition-transform duration-300 
-                         hover:-translate-y-1 hover:shadow-[0_0_15px_#143B69]/50"
+                         hover:-translate-y-1 hover:shadow-[0_0_15px_#1338BE]/50"
             >
               
               {/* Image */}

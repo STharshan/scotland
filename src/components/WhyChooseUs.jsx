@@ -84,8 +84,8 @@ const WhyChooseUs = () => {
 
           {/* Call To Action */}
           <div
-            className="bg-[#143B69] hover:bg-[#0E2A4D] 
-            text-white py-6 md:py-8 px-6 md:px-10 rounded-lg inline-block shadow-[0_0_15px_#143B69] 
+            className="bg-[#1338BE] hover:bg-[#0E2A4D] 
+            text-white py-6 md:py-8 px-6 md:px-10 rounded-lg inline-block shadow-[0_0_15px_#1338BE] 
             transition-all duration-300 text-center lg:text-left"
             data-aos="zoom-in"
             data-aos-delay="200"
@@ -114,20 +114,20 @@ const WhyChooseUs = () => {
                 onClick={() => handleClick(i)}
                 className={`relative h-[220px] flex flex-col items-center justify-center text-center 
                   text-white rounded-lg overflow-hidden transition-all duration-500 cursor-pointer 
-                  bg-gradient-to-b from-[#0E2A4D] to-[#143B69]
+                  bg-gradient-to-b from-[#0E2A4D] to-[#1338BE]
                   ${
                     isMobile
                       ? isActive
-                        ? 'shadow-[0_0_30px_#143B69] -translate-y-2'
-                        : 'shadow-[0_0_20px_#143B69]/40'
-                      : 'hover:-translate-y-2 hover:shadow-[0_0_30px_#143B69]'
+                        ? 'shadow-[0_0_30px_#1338BE] -translate-y-2'
+                        : 'shadow-[0_0_20px_#1338BE]/40'
+                      : 'hover:-translate-y-2 hover:shadow-[0_0_30px_#1338BE]'
                   }`}
               >
                 {/* Subtle Background Overlay */}
                 <div className="absolute inset-0 opacity-20 bg-[url('/road-bg.jpg')] bg-cover bg-center"></div>
 
                 {/* Icon */}
-                <div className="text-5xl mb-3 relative z-10 drop-shadow-[0_0_8px_#143B69]">
+                <div className="text-5xl mb-3 relative z-10 drop-shadow-[0_0_8px_#1338BE]">
                   {item.icon}
                 </div>
 

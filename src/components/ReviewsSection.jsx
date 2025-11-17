@@ -95,7 +95,7 @@ const ReviewsSection = () => {
           </p>
 
           {/* Blue Underline */}
-          <div className="mt-4 w-24 h-[3px] bg-[#143B69] mx-auto rounded-full shadow-[0_0_12px_#143B69]"></div>
+          <div className="mt-4 w-24 h-[3px] bg-[#1338BE] mx-auto rounded-full shadow-[0_0_12px_#1338BE]"></div>
         </div>
 
         {/* Swiper Carousel */}
@@ -125,9 +125,9 @@ const ReviewsSection = () => {
                     ${
                       isMobile
                         ? isActive
-                          ? 'border-[#143B69]/70 shadow-[0_0_25px_#143B69]/60 -translate-y-2'
+                          ? 'border-[#1338BE]/70 shadow-[0_0_25px_#1338BE]/60 -translate-y-2'
                           : 'border-gray-100 dark:border-neutral-700 shadow-md'
-                        : 'border-gray-100 dark:border-neutral-700 shadow-md hover:shadow-[0_0_25px_#143B69]/60 hover:-translate-y-2 hover:border-[#143B69]/60'
+                        : 'border-gray-100 dark:border-neutral-700 shadow-md hover:shadow-[0_0_25px_#1338BE]/60 hover:-translate-y-2 hover:border-[#1338BE]/60'
                     }`}
                   data-aos="zoom-in-up"
                 >
@@ -144,7 +144,7 @@ const ReviewsSection = () => {
                   ></div>
 
                   {/* Reviewer Name */}
-                  <h4 className="text-lg font-bold text-[#143B69] mb-4 drop-shadow-[0_0_8px_#143B69]">
+                  <h4 className="text-lg font-bold text-[#1338BE] mb-4 drop-shadow-[0_0_8px_#1338BE]">
                     {t.name}
                   </h4>
 
@@ -167,8 +167,8 @@ const ReviewsSection = () => {
       </div>
 
       {/* Blue Glow Background Orbs */}
-      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#143B69]/15 blur-[120px] rounded-full -z-10"></div>
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#143B69]/15 blur-[120px] rounded-full -z-10"></div>
+      <div className="absolute top-0 left-0 w-[400px] h-[400px] bg-[#1338BE]/15 blur-[120px] rounded-full -z-10"></div>
+      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] bg-[#1338BE]/15 blur-[120px] rounded-full -z-10"></div>
     </section>
   );
 };

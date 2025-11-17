@@ -24,7 +24,7 @@ const FindUs = () => {
 
         {/* Heading */}
         <div className="flex flex-col items-center mb-10" data-aos="fade-down">
-          <FaMapMarkerAlt className="text-[#143B69] text-4xl mb-3 drop-shadow-[0_0_8px_#143B69]" />
+          <FaMapMarkerAlt className="text-[#1338BE] text-4xl mb-3 drop-shadow-[0_0_8px_#1338BE]" />
 
           <h2 className="text-3xl md:text-5xl font-extrabold text-[#29292A] dark:text-white">
             Find Us
@@ -39,7 +39,7 @@ const FindUs = () => {
           </p>
 
           {/* Blue underline */}
-          <div className="mt-4 w-24 h-[3px] bg-[#143B69] rounded-full shadow-[0_0_12px_#143B69]"></div>
+          <div className="mt-4 w-24 h-[3px] bg-[#1338BE] rounded-full shadow-[0_0_12px_#1338BE]"></div>
         </div>
 
         {/* Google Map */}
@@ -62,8 +62,8 @@ const FindUs = () => {
       </div>
 
       {/* Blue Glow Orbs */}
-      <div className="absolute top-10 left-10 w-[300px] h-[300px] bg-[#143B69]/15 blur-[120px] rounded-full -z-10"></div>
-      <div className="absolute bottom-10 right-10 w-[300px] h-[300px] bg-[#143B69]/15 blur-[120px] rounded-full -z-10"></div>
+      <div className="absolute top-10 left-10 w-[300px] h-[300px] bg-[#1338BE]/15 blur-[120px] rounded-full -z-10"></div>
+      <div className="absolute bottom-10 right-10 w-[300px] h-[300px] bg-[#1338BE]/15 blur-[120px] rounded-full -z-10"></div>
     </section>
   );
 };
