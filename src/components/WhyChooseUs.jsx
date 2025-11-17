@@ -1,10 +1,13 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaHeart, FaTools, FaUserCheck, FaCogs } from 'react-icons/fa';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 const WhyChooseUs = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -12,7 +15,25 @@ const WhyChooseUs = () => {
       once: true,
       easing: 'ease-in-out',
     });
+
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
+
+  const features = [
+    { icon: <FaHeart />, title: 'Passion-Driven Service' },
+    { icon: <FaTools />, title: 'Mobile or Workshop — Your Choice' },
+    { icon: <FaUserCheck />, title: 'Customer-First Approach' },
+    { icon: <FaCogs />, title: 'Expert Knowledge, Real Results' },
+  ];
+
+  const handleClick = (index) => {
+    if (isMobile) {
+      setActiveIndex(activeIndex === index ? null : index);
+    }
+  };
 
   return (
     <section
@@ -23,7 +44,6 @@ const WhyChooseUs = () => {
         
         {/* LEFT SIDE CONTENT */}
         <div data-aos="fade-right">
-
           {/* Heading */}
           <div className="relative mb-10 md:mb-12 text-center lg:text-left">
             <span className="absolute -top-8 md:-top-10 left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 
@@ -86,44 +106,46 @@ const WhyChooseUs = () => {
           data-aos="fade-left"
           data-aos-delay="300"
         >
-          {[
-            { icon: <FaHeart />, title: 'Passion-Driven Service' },
-            { icon: <FaTools />, title: 'Mobile or Workshop — Your Choice' },
-            { icon: <FaUserCheck />, title: 'Customer-First Approach' },
-            { icon: <FaCogs />, title: 'Expert Knowledge, Real Results' },
-          ].map((item, i) => (
-            <div
-              key={i}
-              className="relative group h-[220px] flex flex-col items-center justify-center text-center 
-              bg-gradient-to-b from-[#0E2A4D] to-[#143B69] 
-              text-white rounded-lg overflow-hidden 
-              shadow-[0_0_20px_#143B69]/40 
-              transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_0_30px_#143B69]"
-              data-aos="zoom-in-up"
-              data-aos-delay={100 * (i + 1)}
-            >
-              {/* Subtle Background Overlay */}
-              <div className="absolute inset-0 opacity-20 bg-[url('/road-bg.jpg')] bg-cover bg-center"></div>
-
-              {/* Icon */}
-              <div className="text-5xl mb-3 relative z-10 drop-shadow-[0_0_8px_#143B69]">
-                {item.icon}
-              </div>
-
-              {/* Title */}
-              <h4 className="text-lg font-semibold relative z-10 px-4 leading-snug">
-                {item.title}
-              </h4>
-
-              {/* White angled bottom */}
+          {features.map((item, i) => {
+            const isActive = activeIndex === i;
+            return (
               <div
-                className="absolute bottom-0 left-0 w-full h-8 bg-white"
-                style={{
-                  clipPath: 'polygon(0 70%, 100% 100%, 100% 100%, 0 100%)',
-                }}
-              ></div>
-            </div>
-          ))}
+                key={i}
+                onClick={() => handleClick(i)}
+                className={`relative h-[220px] flex flex-col items-center justify-center text-center 
+                  text-white rounded-lg overflow-hidden transition-all duration-500 cursor-pointer 
+                  bg-gradient-to-b from-[#0E2A4D] to-[#143B69]
+                  ${
+                    isMobile
+                      ? isActive
+                        ? 'shadow-[0_0_30px_#143B69] -translate-y-2'
+                        : 'shadow-[0_0_20px_#143B69]/40'
+                      : 'hover:-translate-y-2 hover:shadow-[0_0_30px_#143B69]'
+                  }`}
+              >
+                {/* Subtle Background Overlay */}
+                <div className="absolute inset-0 opacity-20 bg-[url('/road-bg.jpg')] bg-cover bg-center"></div>
+
+                {/* Icon */}
+                <div className="text-5xl mb-3 relative z-10 drop-shadow-[0_0_8px_#143B69]">
+                  {item.icon}
+                </div>
+
+                {/* Title */}
+                <h4 className="text-lg font-semibold relative z-10 px-4 leading-snug">
+                  {item.title}
+                </h4>
+
+                {/* White angled bottom */}
+                <div
+                  className="absolute bottom-0 left-0 w-full h-8 bg-white"
+                  style={{
+                    clipPath: 'polygon(0 70%, 100% 100%, 100% 100%, 0 100%)',
+                  }}
+                ></div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

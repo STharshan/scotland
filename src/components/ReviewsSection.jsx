@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import { FaStar } from 'react-icons/fa';
@@ -57,6 +57,9 @@ const testimonials = [
 ];
 
 const ReviewsSection = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+  const [isMobile, setIsMobile] = useState(false);
+
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -64,7 +67,16 @@ const ReviewsSection = () => {
       once: true,
       easing: 'ease-in-out',
     });
+
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
   }, []);
+
+  const handleClick = (index) => {
+    if (isMobile) setActiveIndex(activeIndex === index ? null : index);
+  };
 
   return (
     <section
@@ -72,7 +84,6 @@ const ReviewsSection = () => {
       id="reviews"
     >
       <div className="max-w-6xl mx-auto px-6 text-center relative z-10">
-
         {/* Section Title */}
         <div className="mb-16" data-aos="fade-down">
           <h2 className="text-4xl md:text-5xl font-extrabold text-[#29292A] dark:text-white">
@@ -102,34 +113,56 @@ const ReviewsSection = () => {
           }}
           className="pb-10"
         >
-          {testimonials.map((t, index) => (
-            <SwiperSlide key={index}>
-              <div
-                className="flex flex-col justify-between bg-white dark:bg-[#29292A] 
-                           h-[320px] p-8 rounded-2xl border border-gray-100 dark:border-neutral-700 
-                           shadow-md hover:shadow-[0_0_20px_#143B69] hover:-translate-y-2 
-                           transition-all duration-500"
-                data-aos="zoom-in-up"
-              >
-                {/* Name */}
-                <h4 className="text-lg font-bold text-[#143B69] mb-4 drop-shadow-[0_0_8px_#143B69]">
-                  {t.name}
-                </h4>
+          {testimonials.map((t, index) => {
+            const isActive = activeIndex === index;
+            return (
+              <SwiperSlide key={index}>
+                <div
+                  onClick={() => handleClick(index)}
+                  className={`relative flex flex-col justify-between rounded-2xl border p-8 h-[320px]
+                    transition-all duration-500 cursor-pointer overflow-hidden
+                    bg-white dark:bg-[#1a1a1a] 
+                    ${
+                      isMobile
+                        ? isActive
+                          ? 'border-[#143B69]/70 shadow-[0_0_25px_#143B69]/60 -translate-y-2'
+                          : 'border-gray-100 dark:border-neutral-700 shadow-md'
+                        : 'border-gray-100 dark:border-neutral-700 shadow-md hover:shadow-[0_0_25px_#143B69]/60 hover:-translate-y-2 hover:border-[#143B69]/60'
+                    }`}
+                  data-aos="zoom-in-up"
+                >
+                  {/* Subtle background glow for depth */}
+                  <div
+                    className={`absolute inset-0 -z-10 bg-gradient-to-tr from-[#0E2A4D]/20 to-transparent transition-opacity duration-500
+                      ${
+                        isMobile
+                          ? isActive
+                            ? 'opacity-100'
+                            : 'opacity-0'
+                          : 'opacity-0 hover:opacity-100'
+                      }`}
+                  ></div>
 
-                {/* Review */}
-                <p className="flex-1 text-[#454546] dark:text-[#E5E7EB] text-base italic leading-relaxed">
-                  “{t.review}”
-                </p>
+                  {/* Reviewer Name */}
+                  <h4 className="text-lg font-bold text-[#143B69] mb-4 drop-shadow-[0_0_8px_#143B69]">
+                    {t.name}
+                  </h4>
 
-                {/* Stars */}
-                <div className="flex justify-center mt-6">
-                  {[...Array(5)].map((_, i) => (
-                    <FaStar key={i} className="text-yellow-400 text-lg" />
-                  ))}
+                  {/* Review */}
+                  <p className="flex-1 text-[#454546] dark:text-[#E5E7EB] text-base italic leading-relaxed">
+                    “{t.review}”
+                  </p>
+
+                  {/* Stars */}
+                  <div className="flex justify-center mt-6">
+                    {[...Array(5)].map((_, i) => (
+                      <FaStar key={i} className="text-yellow-400 text-lg" />
+                    ))}
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
+              </SwiperSlide>
+            );
+          })}
         </Swiper>
       </div>
 
