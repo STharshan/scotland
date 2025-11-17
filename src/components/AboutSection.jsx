@@ -91,7 +91,7 @@ const AboutTuneItScotland = () => {
           {/* Main Image */}
           <div className="relative z-10">
             <img
-              src="/tuneit-main.png"
+              src="/newcar.jpg"
               alt="Mechanic tuning car engine"
               className="rounded-lg shadow-xl w-[90%] md:w-[85%] object-cover 
                          dark:shadow-neutral-900 transition-all duration-300"
@@ -105,7 +105,7 @@ const AboutTuneItScotland = () => {
 
           {/* Overlapping Secondary Image */}
           <img
-            src="/tuneit-main.png"
+            src="/newcar.jpg"
             alt="Car diagnostic tools in use"
             className="absolute -top-6 right-4 w-32 md:w-36 lg:w-40 rounded-md shadow-lg 
                        border-4 border-white dark:border-[#000000] 
