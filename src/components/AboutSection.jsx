@@ -27,10 +27,12 @@ const AboutTuneItScotland = () => {
           
           {/* Label */}
           <div className="flex items-center gap-2" data-aos="fade-down" data-aos-delay="100">
-            <FaCarSide className="text-[#1338BE] text-xl" />
-            <span className="text-[#1338BE] font-semibold uppercase tracking-wide text-sm">
+           <FaCarSide className="text-[#1338BE] dark:text-white text-xl" />
+
+            <span className="text-[#1338BE] dark:text-white font-semibold uppercase tracking-wide text-sm">
               About Tune It Scotland
             </span>
+
           </div>
 
           {/* Headings */}

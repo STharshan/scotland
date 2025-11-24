@@ -37,22 +37,22 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8 font-semibold text-sm uppercase tracking-wide text-white dark:text-gray-200">
-          <HashLink to="/#home" className="hover:text-[#004B93] transition">
+          <HashLink to="/#home" className="hover:text-[#1E90FF] transition">
             Home
           </HashLink>
-          <HashLink to="/#about" className="hover:text-[#004B93] transition">
+          <HashLink to="/#about" className="hover:text-[#1E90FF] transition">
             About
           </HashLink>
-          <HashLink to="/#services" className="hover:text-[#004B93] transition">
+          <HashLink to="/#services" className="hover:text-[#1E90FF] transition">
             Services
           </HashLink>
-          <HashLink to="/#gallery" className="hover:text-[#004B93] transition">
+          <HashLink to="/#gallery" className="hover:text-[#1E90FF] transition">
             Gallery
           </HashLink>
-          <HashLink to="/#reviews" className="hover:text-[#004B93] transition">
+          <HashLink to="/#reviews" className="hover:text-[#1E90FF] transition">
             Reviews
           </HashLink>
-          <HashLink to="/#contact" className="hover:text-[#004B93] transition">
+          <HashLink to="/#contact" className="hover:text-[#1E90FF] transition">
             Contact
           </HashLink>
         </nav>
@@ -119,42 +119,42 @@ const Navbar = () => {
           <HashLink
             to="#home"
             onClick={() => setIsOpen(false)}
-            className="block hover:text-[#004B93]"
+            className="block hover:text-[#1E90FF]"
           >
             Home
           </HashLink>
           <HashLink
             to="/#about"
             onClick={() => setIsOpen(false)}
-            className="block hover:text-[#004B93]"
+            className="block hover:text-[#1E90FF]"
           >
             About
           </HashLink>
           <HashLink
             to="/#services"
             onClick={() => setIsOpen(false)}
-            className="block hover:text-[#004B93]"
+            className="block hover:text-[#1E90FF]"
           >
             Services
           </HashLink>
           <HashLink
             to="/#gallery"
             onClick={() => setIsOpen(false)}
-            className="block hover:text-[#004B93]"
+            className="block hover:text-[#1E90FF]"
           >
             Gallery
           </HashLink>
           <HashLink
             to="/#reviews"
             onClick={() => setIsOpen(false)}
-            className="block hover:text-[#004B93]"
+            className="block hover:text-[#1E90FF]"
           >
             Reviews
           </HashLink>
           <HashLink
             to="/#contact"
             onClick={() => setIsOpen(false)}
-            className="block hover:text-[#004B93]"
+            className="block hover:text-[#1E90FF]"
           >
             Contact
           </HashLink>

@@ -23,7 +23,7 @@ const ContactSection = () => {
       <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
         {/* LEFT SIDE: CONTACT DETAILS */}
         <div data-aos="fade-right">
-          <FaMapMarkerAlt className="text-[#004B93] dark:text-[#66A8FF] text-4xl mb-3 mx-auto lg:mx-0" />
+          <FaMapMarkerAlt className="text-[#004B93]  text-4xl mb-3 mx-auto lg:mx-0" />
           <h2 className="text-3xl md:text-5xl font-extrabold text-[#2B2B2B] dark:text-white mb-6 text-center lg:text-left">
             Find Us
           </h2>

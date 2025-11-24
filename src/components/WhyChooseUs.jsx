@@ -1,155 +1,166 @@
-'use client';
-import React, { useEffect, useState } from 'react';
-import { FaHeart, FaTools, FaUserCheck, FaCogs } from 'react-icons/fa';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+'use client'
+import { useState } from 'react'
 
-const WhyChooseUs = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      offset: 120,
-      once: true,
-      easing: 'ease-in-out',
-    });
-
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener('resize', checkMobile);
-    return () => window.removeEventListener('resize', checkMobile);
-  }, []);
-
-  const features = [
-    { icon: <FaHeart />, title: 'Passion-Driven Service' },
-    { icon: <FaTools />, title: 'Mobile or Workshop — Your Choice' },
-    { icon: <FaUserCheck />, title: 'Customer-First Approach' },
-    { icon: <FaCogs />, title: 'Expert Knowledge, Real Results' },
-  ];
-
-  const handleClick = (index) => {
-    if (isMobile) {
-      setActiveIndex(activeIndex === index ? null : index);
-    }
-  };
+export default function Header() {
+  const [openServices, setOpenServices] = useState(false)
+  const [openMobile, setOpenMobile] = useState(false)
+  const [openMobileServices, setOpenMobileServices] = useState(false)
 
   return (
-    <section
-      id="why-choose-us"
-      className="relative bg-white dark:bg-black py-20 transition-colors duration-500 overflow-hidden"
-    >
-      <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
-        
-        {/* LEFT SIDE CONTENT */}
-        <div data-aos="fade-right">
-          {/* Heading */}
-          <div className="relative mb-10 md:mb-12 text-center lg:text-left">
-            <span className="absolute -top-8 md:-top-10 left-1/2 lg:left-0 -translate-x-1/2 lg:translate-x-0 
-              text-[40px] md:text-[120px] font-extrabold text-[#777676] dark:text-[#29292A] 
-              opacity-40 select-none pointer-events-none whitespace-nowrap">
-              TUNE IT SCOTLAND
-            </span>
+    <header className="bg-[#EFF0EA] border-b border-[#0A3D2F]/20 relative z-[1000]">
 
-            <h2 className="relative text-3xl md:text-5xl font-extrabold text-[#29292A] dark:text-white z-10">
-              Why Choose Us
-            </h2>
-          </div>
+      {/* MOBILE BAR */}
+      <div className="lg:hidden grid grid-cols-[1fr_auto_1fr] items-center px-5 py-3">
+        <span />
 
-          {/* Description */}
-          <div
-            className="text-[#454546] dark:text-[#777676] leading-relaxed text-sm md:text-base mb-10"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            <p className="mb-6">
-              At{' '}
-              <span className="font-semibold text-[#29292A] dark:text-white">
-                Tune It Scotland
-              </span>
-              , we don’t just tune cars — we take pride in transforming how they
-              drive, perform, and feel. Whether it’s a quick remap, in-depth
-              diagnostics, or a full carbon clean, we treat every vehicle as if it’s
-              our own.
-            </p>
+        <a href="/" className="justify-self-center flex flex-col items-center">
+          <img
+            src="/logo png.png"
+            alt="Sanera Minds"
+            className="h-10 sm:h-16 w-auto drop-shadow-md"
+          />
+          <span className="-mt-1 text-xs sm:text-sm tracking-[0.08em] text-center font-bold text-[#0A3D2F]">
+            EMPOWERING A NEW ERA OF MENTAL WELLNESS
+          </span>
+        </a>
 
-            <p className="mb-6">
-              From mobile callouts to in-house services at our unit, we make it easy
-              and hassle-free to get expert tuning, servicing, and repairs. We
-              believe in honesty, precision, and going above and beyond — every
-              single time.
-            </p>
-          </div>
+        <button
+          onClick={() => setOpenMobile(!openMobile)}
+          className="justify-self-end inline-flex flex-col items-center justify-center w-11 h-11 gap-1.5 ml-4"
+        >
+          <span className="w-8 h-[2px] bg-[#062016]" />
+          <span className="w-8 h-[2px] bg-[#062016]" />
+          <span className="w-8 h-[2px] bg-[#062016]" />
+        </button>
+      </div>
 
-          {/* Call To Action */}
-          <div
-            className="bg-[#1338BE] hover:bg-[#0E2A4D] 
-            text-white py-6 md:py-8 px-6 md:px-10 rounded-lg inline-block shadow-[0_0_15px_#1338BE] 
-            transition-all duration-300 text-center lg:text-left"
-            data-aos="zoom-in"
-            data-aos-delay="200"
-          >
-            <h3 className="text-lg md:text-2xl font-bold">
-              Book Your Car Tuning Appointment
-            </h3>
-            <p className="text-xs md:text-base mt-3 text-blue-100 dark:text-blue-200 max-w-lg mx-auto lg:mx-0 leading-relaxed">
-              Get your vehicle tuned for maximum performance, improved responsiveness,
-              and smoother driving.
-            </p>
-          </div>
+      {/* DESKTOP NAV */}
+      <div className="hidden lg:flex flex-col items-center max-w-full mx-auto md:mx-6">
+
+        <div className="grid grid-cols-[1fr_auto_1fr] items-center gap-4 min-h-24 px-6 w-full">
+
+          {/* LEFT NAV */}
+          <nav className="hidden lg:flex items-center gap-6 lg:gap-10 xl:gap-20 mt-0">
+            <a
+              href="/"
+              className="px-3 py-2 rounded-md uppercase tracking-[0.15em] text-[16px] font-bold text-[#0A3D2F] hover:bg-[#0A3D2F] hover:text-white transition"
+            >
+              Home
+            </a>
+
+            <div className="relative">
+              <button
+                onClick={() => setOpenServices(!openServices)}
+                className={`px-3 py-2 rounded-md uppercase tracking-[0.15em] text-[16px] font-bold transition
+                  ${openServices ? 'bg-[#0A3D2F] text-white' : 'text-[#0A3D2F] hover:bg-[#0A3D2F] hover:text-white'}
+                `}
+              >
+                Services <span className="ml-1 text-[12px] opacity-80 font-bold">▾</span>
+              </button>
+
+              {openServices && (
+                <ul className="absolute left-0 mt-3 min-w-64 rounded-xl border border-[#0A3D2F]/25 bg-white shadow-xl p-2 z-50">
+                  {[
+                    { label: 'Organisations', href: '/services/organisation' },
+                    { label: 'Education', href: '/services/education' },
+                    { label: 'Events', href: '/services/events' },
+                    { label: 'Contact us', href: '/contact' },
+                  ].map((item) => (
+                    <li key={item.label}>
+                      <a
+                        href={item.href}
+                        className="block px-3 py-2 rounded-lg text-[16px] tracking-[0.02em] font-semibold text-[#0A3D2F] hover:bg-[#EFF0EA]"
+                      >
+                        {item.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
+          </nav>
+
+          {/* LOGO */}
+          <a href="/" className="flex items-center justify-center shrink-0">
+            <img
+              src="/logo png.png"
+              alt="Sanera Minds"
+              className="h-12 lg:h-10 xl:h-[70px] w-auto drop-shadow-lg"
+            />
+          </a>
+
+          {/* RIGHT NAV */}
+          <nav className="hidden lg:flex items-center justify-end gap-6 lg:gap-10 xl:gap-20 mt-0">
+
+            <a
+              href="/about"
+              className="px-3 py-2 rounded-md uppercase tracking-[0.15em] text-[16px] font-bold text-[#0A3D2F] hover:bg-[#0A3D2F] hover:text-white transition"
+            >
+              About us
+            </a>
+
+            <a
+              href="/contact"
+              className="px-3 py-2 rounded-md uppercase tracking-[0.15em] text-[16px] font-bold text-[#0A3D2F] hover:bg-[#0A3D2F] hover:text-white transition"
+            >
+              Contact us
+            </a>
+          </nav>
         </div>
 
-        {/* RIGHT SIDE FEATURE GRID */}
-        <div
-          className="grid grid-cols-1 sm:grid-cols-2 gap-8"
-          data-aos="fade-left"
-          data-aos-delay="300"
-        >
-          {features.map((item, i) => {
-            const isActive = activeIndex === i;
-            return (
-              <div
-                key={i}
-                onClick={() => handleClick(i)}
-                className={`relative h-[220px] flex flex-col items-center justify-center text-center 
-                  text-white rounded-lg overflow-hidden transition-all duration-500 cursor-pointer 
-                  bg-gradient-to-b from-[#0E2A4D] to-[#1338BE]
-                  ${
-                    isMobile
-                      ? isActive
-                        ? 'shadow-[0_0_30px_#1338BE] -translate-y-2'
-                        : 'shadow-[0_0_20px_#1338BE]/40'
-                      : 'hover:-translate-y-2 hover:shadow-[0_0_30px_#1338BE]'
-                  }`}
-              >
-                {/* Subtle Background Overlay */}
-                <div className="absolute inset-0 opacity-20 bg-[url('/road-bg.jpg')] bg-cover bg-center"></div>
-
-                {/* Icon */}
-                <div className="text-5xl mb-3 relative z-10 drop-shadow-[0_0_8px_#1338BE]">
-                  {item.icon}
-                </div>
-
-                {/* Title */}
-                <h4 className="text-lg font-semibold relative z-10 px-4 leading-snug">
-                  {item.title}
-                </h4>
-
-                {/* White angled bottom */}
-                <div
-                  className="absolute bottom-0 left-0 w-full h-8 bg-white"
-                  style={{
-                    clipPath: 'polygon(0 70%, 100% 100%, 100% 100%, 0 100%)',
-                  }}
-                ></div>
-              </div>
-            );
-          })}
+        {/* SLOGAN */}
+        <div className="-mt-3 mb-3">
+          <p className="text-[15px] lg:text-[16px] tracking-[0.08em] text-center font-bold text-[#0A3D2F]">
+            EMPOWERING A NEW ERA OF MENTAL WELLNESS
+          </p>
         </div>
       </div>
-    </section>
-  );
-};
 
-export default WhyChooseUs;
+      {/* MOBILE PANEL */}
+      <div
+        className={`lg:hidden overflow-hidden bg-[#EFF0EA] border-t border-[#0A3D2F]/20 transition-[max-height] duration-200 ${
+          openMobile ? 'max-h-[75vh]' : 'max-h-0'
+        }`}
+      >
+        <nav className="flex flex-col py-2">
+          <a href="/" className="px-6 py-3 uppercase tracking-[0.18em] text-[14px] font-bold text-[#0A3D2F]">
+            Home
+          </a>
+
+          <button
+            onClick={() => setOpenMobileServices(!openMobileServices)}
+            className="px-6 py-3 text-left uppercase tracking-[0.18em] text-[14px] font-bold text-[#0A3D2F] flex items-center justify-between"
+          >
+            <span>Services</span>
+            <span className="text-[12px] font-bold">{openMobileServices ? '▴' : '▾'}</span>
+          </button>
+
+          <div className={`${openMobileServices ? 'block' : 'hidden'} px-3 pb-2`}>
+            {[
+              { label: 'Organisations', href: '/services/organisation' },
+              { label: 'Education', href: '/services/education' },
+              { label: 'Events', href: '/services/events' },
+              { label: 'Contact us', href: '/contact' },
+            ].map((item) => (
+              <a
+                key={item.label}
+                href={item.href}
+                className="block mx-3 mb-2 px-4 py-2 rounded-lg border border-[#0A3D2F]/25 bg-white font-semibold text-[14px] text-[#0A3D2F]"
+              >
+                {item.label}
+              </a>
+            ))}
+          </div>
+
+          <a href="/about" className="px-6 py-3 uppercase tracking-[0.18em] text-[14px] font-bold text-[#0A3D2F]">
+            About us
+          </a>
+
+          <a href="/contact" className="px-6 py-3 uppercase tracking-[0.18em] text-[14px] font-bold text-[#0A3D2F]">
+            Contact us
+          </a>
+        </nav>
+      </div>
+    </header>
+  )
+}

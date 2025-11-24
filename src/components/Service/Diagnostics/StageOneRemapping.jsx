@@ -19,7 +19,7 @@ export default function StageOneRemapping() {
   };
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black transition-colors duration-500">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black transition-colors duration-500" id="services">
       <div className="max-w-7xl mx-auto">
         
         {/* Header */}
