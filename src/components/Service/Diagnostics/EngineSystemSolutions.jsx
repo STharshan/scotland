@@ -7,15 +7,12 @@ export default function EngineSystemSolutions() {
   const [activeIndex, setActiveIndex] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
 
-  // Detect mobile view once on mount
   useEffect(() => {
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
-
-  const BLUE = "#1338BE";
 
   const solutions = [
     {
@@ -69,14 +66,15 @@ export default function EngineSystemSolutions() {
   };
 
   return (
-    <section className="bg-black py-24 px-4">
+    <section className="py-24 px-4 bg-white dark:bg-black transition-colors duration-500">
       <div className="max-w-7xl mx-auto">
+        
         {/* Header */}
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-[#29292A] dark:text-white mb-4">
             Engine System Solutions
           </h2>
-          <p className="text-lg text-[#777676] max-w-2xl mx-auto">
+          <p className="text-lg text-[#454546] dark:text-[#777676] max-w-2xl mx-auto">
             Professional diagnostics and system support for modern diesel engines.
           </p>
         </div>
@@ -90,7 +88,9 @@ export default function EngineSystemSolutions() {
               <div
                 key={index}
                 onClick={() => handleClick(index)}
-                className={`group relative bg-[#111] border border-[#29292A] rounded-lg p-8 transition-all duration-300 cursor-pointer 
+                className={`group relative rounded-lg p-8 cursor-pointer transition-all duration-300
+                  bg-white dark:bg-[#111]
+                  border border-[#d1d1d1] dark:border-[#29292A]
                   ${
                     isMobile
                       ? isActive
@@ -99,7 +99,7 @@ export default function EngineSystemSolutions() {
                       : "hover:border-[#1338BE]/50 hover:shadow-[0_0_20px_#1338BE]/40"
                   }`}
               >
-                {/* Top glow bar */}
+                {/* Top Glow Bar */}
                 <div
                   className={`absolute top-0 left-0 w-full h-1 rounded-t-lg transition-opacity duration-300 
                     ${
@@ -115,13 +115,13 @@ export default function EngineSystemSolutions() {
                 <div className="mb-6">
                   <div
                     className={`w-14 h-14 rounded-lg flex items-center justify-center transition-colors duration-300
-                    ${
-                      isMobile
-                        ? isActive
-                          ? "bg-[#1338BE]/10"
-                          : "bg-[#1a1a1a]"
-                        : "bg-[#1a1a1a] group-hover:bg-[#1338BE]/10"
-                    }`}
+                      ${
+                        isMobile
+                          ? isActive
+                            ? "bg-[#1338BE]/10"
+                            : "bg-[#f5f5f5] dark:bg-[#1a1a1a]"
+                          : "bg-[#f5f5f5] dark:bg-[#1a1a1a] group-hover:bg-[#1338BE]/10"
+                      }`}
                   >
                     {sol.icon}
                   </div>
@@ -130,13 +130,13 @@ export default function EngineSystemSolutions() {
                 {/* Title */}
                 <h3
                   className={`text-2xl font-bold mb-4 transition-colors duration-300
-                  ${
-                    isMobile
-                      ? isActive
-                        ? "text-[#1338BE]"
-                        : "text-white"
-                      : "text-white group-hover:text-[#1338BE]"
-                  }`}
+                    ${
+                      isMobile
+                        ? isActive
+                          ? "text-[#1338BE]"
+                          : "text-[#29292A] dark:text-white"
+                        : "text-[#29292A] dark:text-white group-hover:text-[#1338BE]"
+                    }`}
                 >
                   {sol.title}
                 </h3>
@@ -146,10 +146,13 @@ export default function EngineSystemSolutions() {
                   {sol.items.map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <div className="w-1.5 h-1.5 rounded-full bg-[#1338BE] mt-2 shrink-0"></div>
-                      <span className="text-[#777676] leading-relaxed">{item}</span>
+                      <span className="text-[#454546] dark:text-[#777676] leading-relaxed">
+                        {item}
+                      </span>
                     </li>
                   ))}
                 </ul>
+
               </div>
             );
           })}

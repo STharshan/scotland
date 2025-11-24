@@ -18,11 +18,10 @@ export default function StageOneRemapping() {
     if (isMobile) setActiveIndex(activeIndex === index ? null : index);
   };
 
-  const BLUE = "#1338BE";
-
   return (
-    <section className="bg-black py-24 px-4 sm:px-6 lg:px-8">
+    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white dark:bg-black transition-colors duration-500">
       <div className="max-w-7xl mx-auto">
+        
         {/* Header */}
         <div className="mb-16 text-center">
           <span
@@ -33,11 +32,11 @@ export default function StageOneRemapping() {
             Stage 1 Remapping
           </span>
 
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4">
+          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-[#29292A] dark:text-white mb-4">
             Unlock Your Vehicle's Potential
           </h2>
 
-          <p className="text-xl text-[#777676] max-w-3xl mx-auto">
+          <p className="text-xl text-[#454546] dark:text-[#777676] max-w-3xl mx-auto">
             Choose your path: Maximum performance or optimal efficiency. Both
             deliver instant, noticeable results.
           </p>
@@ -45,6 +44,7 @@ export default function StageOneRemapping() {
 
         {/* Cards Section */}
         <div className="grid lg:grid-cols-2 gap-8">
+          
           {/* PERFORMANCE CARD */}
           <Card
             index={0}
@@ -94,7 +94,7 @@ export default function StageOneRemapping() {
   );
 }
 
-/* Reusable Card Component */
+/* REUSABLE CARD */
 function Card({
   index,
   activeIndex,
@@ -111,18 +111,20 @@ function Card({
   return (
     <div
       onClick={() => handleClick(index)}
-      className={`flex flex-col gap-6 rounded-xl border py-6 bg-[#0d0d0d] transition-all duration-300 cursor-pointer relative overflow-hidden
+      className={`flex flex-col gap-6 rounded-xl border py-6 
+        bg-white dark:bg-[#0d0d0d] transition-all duration-300 cursor-pointer relative overflow-hidden
         ${
           isMobile
             ? isActive
               ? "border-[#1338BE]/70 shadow-[0_0_25px_#1338BE]/60"
-              : "border-[#29292A]"
-            : "border-[#29292A] hover:border-[#1338BE]/50 hover:shadow-[0_0_25px_#1338BE]/40"
+              : "border-[#d1d1d1] dark:border-[#29292A]"
+            : "border-[#d1d1d1] dark:border-[#29292A] hover:border-[#1338BE]/50 hover:shadow-[0_0_25px_#1338BE]/40"
         }`}
     >
-      {/* Glow gradient background */}
+      {/* Blue Glow Background */}
       <div
-        className={`absolute inset-0 -z-10 bg-gradient-to-br from-[#0E2A4D]/25 to-transparent transition-opacity duration-300
+        className={`absolute inset-0 -z-10 bg-gradient-to-br from-[#0E2A4D]/25 to-transparent 
+          transition-opacity duration-300
           ${
             isMobile
               ? isActive
@@ -133,6 +135,7 @@ function Card({
       ></div>
 
       <div className="p-8 lg:p-10">
+        
         {/* Icon + Header */}
         <div className="mb-6">
           <div
@@ -156,20 +159,21 @@ function Card({
                 isMobile
                   ? isActive
                     ? "text-[#1338BE]"
-                    : "text-white"
-                  : "text-white group-hover:text-[#1338BE]"
+                    : "text-[#29292A] dark:text-white"
+                  : "text-[#29292A] dark:text-white group-hover:text-[#1338BE]"
               }`}
           >
             {title}
           </h3>
-          <p className="text-[#777676] text-lg leading-relaxed">
+
+          <p className="text-lg leading-relaxed text-[#454546] dark:text-[#777676]">
             {description}
           </p>
         </div>
 
         {/* Benefits */}
         <div className="mb-8">
-          <h4 className="text-sm font-semibold text-[#454546] uppercase tracking-wider mb-4">
+          <h4 className="text-sm font-semibold text-[#454546] dark:text-[#999] uppercase tracking-wider mb-4">
             Benefits
           </h4>
           <div className="grid gap-3">
@@ -181,7 +185,7 @@ function Card({
 
         {/* Perfect For */}
         <div>
-          <h4 className="text-sm font-semibold text-[#454546] uppercase tracking-wider mb-4">
+          <h4 className="text-sm font-semibold text-[#454546] dark:text-[#999] uppercase tracking-wider mb-4">
             Perfect For
           </h4>
           <div className="grid gap-3">
@@ -190,28 +194,30 @@ function Card({
             ))}
           </div>
         </div>
+
       </div>
     </div>
   );
 }
 
-/* Sub-components */
+/* Benefit Item */
 function BenefitItem({ icon, text }) {
   return (
     <div className="flex items-start gap-3">
       <div className="w-5 h-5 rounded-full flex items-center justify-center mt-0.5 shrink-0 bg-[#1338BE]/15">
         {React.cloneElement(icon, { className: "w-3 h-3 text-[#1338BE]" })}
       </div>
-      <span className="text-[#E5E5E5]">{text}</span>
+      <span className="text-[#29292A] dark:text-[#E5E5E5]">{text}</span>
     </div>
   );
 }
 
+/* Perfect For Item */
 function PerfectForItem({ text }) {
   return (
     <div className="flex items-start gap-3">
       <div className="w-1.5 h-1.5 rounded-full bg-[#1338BE] mt-2 shrink-0"></div>
-      <span className="text-[#777676]">{text}</span>
+      <span className="text-[#454546] dark:text-[#777676]">{text}</span>
     </div>
   );
 }

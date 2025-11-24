@@ -20,20 +20,22 @@ export default function ExtraServicesOffered() {
       desc: "Advanced diagnostic services to identify and resolve vehicle issues with precision",
       icon: (
         <Settings className="h-8 w-8 text-[#1338BE] drop-shadow-[0_0_6px_#1338BE]" />
-      ),
+      )
     },
     {
       title: "Servicing & Repairs",
       desc: "Comprehensive servicing and repair solutions to keep your vehicle running smoothly",
       icon: (
         <Wrench className="h-8 w-8 text-[#1338BE] drop-shadow-[0_0_6px_#1338BE]" />
-      ),
+      )
     },
     {
       title: "Key Cutting",
       desc: "Professional key cutting and programming services for all vehicle makes and models",
-      icon: <Key className="h-8 w-8 text-[#1338BE] drop-shadow-[0_0_6px_#1338BE]" />,
-    },
+      icon: (
+        <Key className="h-8 w-8 text-[#1338BE] drop-shadow-[0_0_6px_#1338BE]" />
+      )
+    }
   ];
 
   const handleClick = (index) => {
@@ -41,10 +43,10 @@ export default function ExtraServicesOffered() {
   };
 
   return (
-    <section className="bg-black py-16 px-4">
+    <section className="py-16 px-4 bg-white dark:bg-black transition-colors duration-500">
       <div className="max-w-7xl mx-auto">
         {/* Heading */}
-        <h2 className="text-center font-bold text-4xl text-white mb-12">
+        <h2 className="text-center font-bold text-4xl text-[#29292A] dark:text-white mb-12">
           Extra Services Offered
         </h2>
 
@@ -57,18 +59,20 @@ export default function ExtraServicesOffered() {
               <div
                 key={index}
                 onClick={() => handleClick(index)}
-                className={`relative overflow-hidden rounded-lg border bg-[#0d0d0d] p-8 transition-all duration-300 cursor-pointer
+                className={`relative overflow-hidden rounded-lg border p-8 bg-[#f7f7f7] dark:bg-[#0d0d0d] 
+                  transition-all duration-300 cursor-pointer
                   ${
                     isMobile
                       ? isActive
                         ? "border-[#1338BE]/70 shadow-[0_0_18px_#1338BE]/60"
-                        : "border-[#29292A]"
-                      : "border-[#29292A] hover:border-[#1338BE]/60 hover:shadow-[0_0_18px_#1338BE]/40"
+                        : "border-[#d1d1d1] dark:border-[#29292A]"
+                      : "border-[#d1d1d1] dark:border-[#29292A] hover:border-[#1338BE]/60 hover:shadow-[0_0_18px_#1338BE]/40"
                   }`}
               >
                 {/* Blue hover gradient background */}
                 <div
-                  className={`absolute inset-0 -z-10 bg-gradient-to-br from-[#0E2A4D]/25 to-transparent transition-opacity duration-300
+                  className={`absolute inset-0 -z-10 bg-gradient-to-br from-[#0E2A4D]/25 to-transparent 
+                    transition-opacity duration-300
                     ${
                       isMobile
                         ? isActive
@@ -99,15 +103,17 @@ export default function ExtraServicesOffered() {
                       isMobile
                         ? isActive
                           ? "text-[#1338BE]"
-                          : "text-white"
-                        : "text-white group-hover:text-[#1338BE]"
+                          : "text-[#29292A] dark:text-white"
+                        : "text-[#29292A] dark:text-white group-hover:text-[#1338BE]"
                     }`}
                 >
                   {item.title}
                 </h3>
 
                 {/* Description */}
-                <p className="text-[#777676] leading-relaxed">{item.desc}</p>
+                <p className="text-[#454546] dark:text-[#777676] leading-relaxed">
+                  {item.desc}
+                </p>
               </div>
             );
           })}
