@@ -69,17 +69,23 @@ const AboutTuneItScotland = () => {
             </div>
           </div>
 
-          {/* Button */}
           <button
-            className="flex items-center gap-2 bg-[#1338BE] hover:bg-[#0E2A4D] 
-                       text-white font-semibold uppercase px-6 py-3 rounded-md mt-6 
-                       transition-all duration-300"
-            data-aos="fade-up"
-            data-aos-delay="500"
-          >
-            Get In Touch
-            <FaArrowRight className="text-sm mt-[2px]" />
-          </button>
+  onClick={() => {
+    document.getElementById("contact")?.scrollIntoView({
+      behavior: "smooth",
+      block: "start"
+    });
+  }}
+  className="flex items-center gap-2 bg-[#1338BE] hover:bg-[#0E2A4D] 
+             text-white font-semibold uppercase px-6 py-3 rounded-md mt-6 
+             transition-all duration-300"
+  data-aos="fade-up"
+  data-aos-delay="500"
+>
+  Get In Touch
+  <FaArrowRight className="text-sm mt-[2px]" />
+</button>
+
         </div>
 
         {/* Right Images */}
