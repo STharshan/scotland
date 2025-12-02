@@ -25,13 +25,13 @@ const Navbar = () => {
           : 'bg-gradient-to-b from-[#2B2B2B]/80 to-transparent backdrop-blur-sm'
       }`}
     >
-      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-4">
+      <div className="max-w-7xl mx-auto flex justify-between items-center px-6 py-2">
         {/* Logo */}
         <a to="/#home" className="flex items-center">
           <img
             src="logo-removebg-preview.png"
             alt="Tune-It Scotland Logo"
-            className="w-auto h-12 object-contain"
+            className="w-auto h-15 object-contain"
           />
         </a>
 
@@ -117,7 +117,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="lg:hidden bg-[#2B2B2B]/95 dark:bg-neutral-900 text-white dark:text-gray-200 text-center py-6 space-y-5 font-semibold uppercase tracking-wide transition-all duration-300">
           <HashLink
-            to="#home"
+            to="/#home"
             onClick={() => setIsOpen(false)}
             className="block hover:text-[#1E90FF]"
           >

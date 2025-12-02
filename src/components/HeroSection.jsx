@@ -20,7 +20,7 @@ const Hero = () => {
   };
 
   return (
-    <main className="relative h-screen w-full flex flex-col justify-center items-center text-center text-white overflow-hidden">
+    <main id='home' className="relative h-screen w-full flex flex-col justify-center items-center text-center text-white overflow-hidden">
 
       {/* Background Video */}
       <video

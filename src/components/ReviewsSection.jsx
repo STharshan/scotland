@@ -117,40 +117,39 @@ const ReviewsSection = () => {
             const isActive = activeIndex === index;
             return (
               <SwiperSlide key={index}>
-  <div
-    onClick={() => handleClick(index)}
-    className={`relative flex flex-col justify-between rounded-2xl border p-8 h-[340px] text-left
-      transition-all duration-500 cursor-pointer overflow-hidden
+                <div
+                  onClick={() => handleClick(index)}
+                  className={`relative flex flex-col justify-between rounded-2xl border p-8 h-[340px] text-left
+      transition-all duration-500 cursor-pointer overflow-hidden mb-10 mt-10
       bg-white dark:bg-[#1a1a1a] 
-      ${
-        isMobile
-          ? isActive
-            ? 'border-[#1338BE]/70 shadow-[0_0_25px_#1338BE]/60 -translate-y-2'
-            : 'border-gray-100 dark:border-neutral-700 shadow-md'
-          : 'border-gray-100 dark:border-neutral-700 shadow-md hover:shadow-[0_0_25px_#1338BE]/60 hover:-translate-y-2 hover:border-[#1338BE]/60'
-      }`}
-    data-aos="zoom-in-up"
-  >
-    
-    {/* ⭐⭐⭐⭐⭐ */}
-    <div className="flex gap-1 mb-4">
-      {[...Array(5)].map((_, i) => (
-        <FaStar key={i} className="text-yellow-400 text-lg" />
-      ))}
-    </div>
+      ${isMobile
+                      ? isActive
+                        ? 'border-[#1338BE]/70 shadow-[0_0_25px_#1338BE]/60 -translate-y-2'
+                        : 'border-gray-100 dark:border-neutral-700 shadow-md'
+                      : 'border-gray-100 dark:border-neutral-700 shadow-md hover:shadow-[0_0_25px_#1338BE]/60 hover:-translate-y-2 hover:border-[#1338BE]/60'
+                    }`}
+                  data-aos="zoom-in-up"
+                >
 
-    {/* Review */}
-    <p className="flex-1 text-[#454546] dark:text-[#E5E7EB] text-base italic leading-relaxed mb-6">
-      “{t.review}”
-    </p>
+                  {/* ⭐⭐⭐⭐⭐ */}
+                  <div className="flex gap-1 mb-4">
+                    {[...Array(5)].map((_, i) => (
+                      <FaStar key={i} className="text-yellow-400 text-lg" />
+                    ))}
+                  </div>
 
-    {/* Name */}
-    <h4 className="text-lg font-bold text-[#1338BE] drop-shadow-[0_0_8px_#1338BE]">
-      {t.name}
-    </h4>
+                  {/* Review */}
+                  <p className="flex-1 text-[#454546] dark:text-[#E5E7EB] text-base italic leading-relaxed mb-6">
+                    “{t.review}”
+                  </p>
 
-  </div>
-</SwiperSlide>
+                  {/* Name */}
+                  <h4 className="text-lg font-bold text-[#1338BE] drop-shadow-[0_0_8px_#1338BE]">
+                    {t.name}
+                  </h4>
+
+                </div>
+              </SwiperSlide>
 
             );
           })}

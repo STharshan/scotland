@@ -9,6 +9,7 @@ import {
   FaEnvelope,
 } from 'react-icons/fa';
 import { Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 
 const Footer = () => {
   return (
@@ -21,10 +22,11 @@ const Footer = () => {
           </h2>
           <p className="text-sm text-gray-400 leading-relaxed">
             Scotland’s trusted vehicle tuning and performance experts. We deliver precision,
-            reliability, and passion — helping you get the most out of your car.
+            reliability, and passion - helping you get the most out of your car.
           </p>
           <div className="flex items-center gap-3 mt-5">
             <a
+              target='_blank'
               href="https://www.facebook.com/TuneItScotland/"
               className="p-2 bg-[#004B93] hover:bg-[#00376C] rounded-full text-white transition"
               aria-label="Facebook"
@@ -35,19 +37,45 @@ const Footer = () => {
         </div>
 
         {/* Quick Links */}
+        {/* Quick Links */}
         <div>
           <h3 className="text-white text-lg font-semibold mb-4 border-b border-[#004B93] inline-block pb-1">
             Quick Links
           </h3>
           <ul className="space-y-2 text-sm">
-            <li><a href="#home" className="hover:text-[#004B93] transition">Home</a></li>
-            <li><a href="#about" className="hover:text-[#004B93] transition">About</a></li>
-            <li><a href="#services" className="hover:text-[#004B93] transition">Services</a></li>
-            <li><a href="#gallery" className="hover:text-[#004B93] transition">Gallery</a></li>
-            <li><a href="#reviews" className="hover:text-[#004B93] transition">Reviews</a></li>
-            <li><a href="#contact" className="hover:text-[#004B93] transition">Contact</a></li>
+            <li>
+              <HashLink smooth to="/#home" className="hover:text-[#004B93] transition">
+                Home
+              </HashLink>
+            </li>
+            <li>
+              <HashLink smooth to="/#about" className="hover:text-[#004B93] transition">
+                About
+              </HashLink>
+            </li>
+            <li>
+              <HashLink smooth to="/#services" className="hover:text-[#004B93] transition">
+                Services
+              </HashLink>
+            </li>
+            <li>
+              <HashLink smooth to="/#gallery" className="hover:text-[#004B93] transition">
+                Gallery
+              </HashLink>
+            </li>
+            <li>
+              <HashLink smooth to="/#reviews" className="hover:text-[#004B93] transition">
+                Reviews
+              </HashLink>
+            </li>
+            <li>
+              <HashLink smooth to="/#contact" className="hover:text-[#004B93] transition">
+                Contact
+              </HashLink>
+            </li>
           </ul>
         </div>
+
 
         {/* Services */}
         <div>
@@ -71,9 +99,11 @@ const Footer = () => {
           <ul className="space-y-3 text-sm">
             <li className="flex items-start gap-3">
               <FaMapMarkerAlt className="text-[#004B93] mt-1" />
-              <span>
-                Unit B8, 15 Carmyle Ave,<br />Glasgow G32 8HL, United Kingdom
-              </span>
+              <a target='_blank' href='https://maps.app.goo.gl/bLrYgG5rVCLcNCe46' className="hover:text-[#004B93] transition">
+                <span>
+                  Unit B8, 15 Carmyle Ave,<br />Glasgow G32 8HL, United Kingdom
+                </span>
+              </a>
             </li>
             <li className="flex items-center gap-3">
               <FaPhoneAlt className="text-[#004B93]" />

@@ -18,7 +18,7 @@ const ContactSection = () => {
   return (
     <section
       id="contact"
-      className="relative bg-gray-50 dark:bg-neutral-900 py-20 overflow-hidden transition-colors duration-500"
+      className="relative scroll-m-10 bg-gray-50 dark:bg-neutral-900 py-20 overflow-hidden transition-colors duration-500"
     >
       <div className="max-w-7xl mx-auto px-6 md:px-10 grid grid-cols-1 lg:grid-cols-2 gap-14 items-start">
         {/* LEFT SIDE: CONTACT DETAILS */}
@@ -27,13 +27,15 @@ const ContactSection = () => {
           <h2 className="text-3xl md:text-5xl font-extrabold text-[#2B2B2B] dark:text-white mb-6 text-center lg:text-left">
             Find Us
           </h2>
-          <p
-            className="text-[#555] dark:text-gray-300 mt-3 text-lg max-w-2xl mx-auto lg:mx-0 text-center lg:text-left"
-            data-aos="fade-up"
-            data-aos-delay="100"
-          >
-            Tune-it Scotland, Unit B8, 15 Carmyle Ave, Glasgow G32 8HL, United Kingdom
-          </p>
+          <a  target='_blank' href='https://maps.app.goo.gl/bLrYgG5rVCLcNCe46'>
+            <p
+              className="text-[#555] dark:text-gray-300 mt-3 text-lg max-w-2xl mx-auto lg:mx-0 text-center lg:text-left ont-medium hover:underline hover:text-[#004B93] underline-offset-2"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              Tune-it Scotland, Unit B8, 15 Carmyle Ave, Glasgow G32 8HL, United Kingdom
+            </p>
+          </a>
           <div className="mt-4 mb-10 w-24 h-[3px] bg-[#004B93] dark:bg-[#005BBB] mx-auto lg:mx-0 rounded-full"></div>
 
           {/* Contact Info */}

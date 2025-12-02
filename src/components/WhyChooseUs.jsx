@@ -66,7 +66,7 @@ const WhyChooseUs = () => {
               <span className="font-semibold text-[#29292A] dark:text-white">
                 Tune It Scotland
               </span>
-              , we don’t just tune cars — we take pride in transforming how they
+              , we don’t just tune cars - we take pride in transforming how they
               drive, perform, and feel. Whether it’s a quick remap, in-depth
               diagnostics, or a full carbon clean, we treat every vehicle as if it’s
               our own.
@@ -75,7 +75,7 @@ const WhyChooseUs = () => {
             <p className="mb-6">
               From mobile callouts to in-house services at our unit, we make it easy
               and hassle-free to get expert tuning, servicing, and repairs. We
-              believe in honesty, precision, and going above and beyond — every
+              believe in honesty, precision, and going above and beyond - every
               single time.
             </p>
           </div>

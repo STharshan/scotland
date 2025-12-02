@@ -21,13 +21,13 @@ const AboutTuneItScotland = () => {
       id="about"
     >
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-14 items-center">
-        
+
         {/* Left Content */}
         <div className="space-y-6" data-aos="fade-up">
-          
+
           {/* Label */}
           <div className="flex items-center gap-2" data-aos="fade-down" data-aos-delay="100">
-           <FaCarSide className="text-[#1338BE] dark:text-white text-xl" />
+            <FaCarSide className="text-[#1338BE] dark:text-white text-xl" />
 
             <span className="text-[#1338BE] dark:text-white font-semibold uppercase tracking-wide text-sm">
               About Tune It Scotland
@@ -48,7 +48,7 @@ const AboutTuneItScotland = () => {
             data-aos="fade-up"
             data-aos-delay="300"
           >
-            Tune It Scotland has been a trusted name in the car scene for 6–7 years — known for
+            Tune It Scotland has been a trusted name in the car scene for 6–7 years - known for
             precision tuning, honest service, and a genuine passion for performance. In that time,
             we’ve built a strong reputation across Scotland by helping drivers unlock their car’s
             true potential.
@@ -72,21 +72,21 @@ const AboutTuneItScotland = () => {
           </div>
 
           <button
-  onClick={() => {
-    document.getElementById("contact")?.scrollIntoView({
-      behavior: "smooth",
-      block: "start"
-    });
-  }}
-  className="flex items-center gap-2 bg-[#1338BE] hover:bg-[#0E2A4D] 
+            onClick={() => {
+              document.getElementById("contact")?.scrollIntoView({
+                behavior: "smooth",
+                block: "start"
+              });
+            }}
+            className="flex items-center gap-2 bg-[#1338BE] hover:bg-[#0E2A4D] 
              text-white font-semibold uppercase px-6 py-3 rounded-md mt-6 
              transition-all duration-300"
-  data-aos="fade-up"
-  data-aos-delay="500"
->
-  Get In Touch
-  <FaArrowRight className="text-sm mt-[2px]" />
-</button>
+            data-aos="fade-up"
+            data-aos-delay="500"
+          >
+            Get In Touch
+            <FaArrowRight className="text-sm mt-[2px]" />
+          </button>
 
         </div>
 
@@ -99,7 +99,7 @@ const AboutTuneItScotland = () => {
           {/* Main Image */}
           <div className="relative z-10">
             <img
-              src="/newcar.png"
+              src="/about.jpg"
               alt="Mechanic tuning car engine"
               className="rounded-lg shadow-xl w-[90%] md:w-[85%] object-cover 
                          dark:shadow-neutral-900 transition-all duration-300"
@@ -108,15 +108,15 @@ const AboutTuneItScotland = () => {
             />
 
             {/* Blue Corner Accent */}
-            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-[#1338BE] -z-10 clip-triangle"></div>
+            <div className="absolute -bottom-6 -left-6 w-24 h-24 bg-[#1338BE]  z-100 clip-triangle"></div>
           </div>
 
           {/* Overlapping Secondary Image */}
           <img
             src="/newcar.png"
             alt="Car diagnostic tools in use"
-            className="absolute -top-6 right-4 w-32 md:w-36 lg:w-40 rounded-md shadow-lg 
-                       border-4 border-white dark:border-[#000000] 
+            className="absolute z-100 -top-6 right-4 w-32 md:w-36 lg:w-40
+              
                        hidden sm:block transition-transform duration-300 hover:scale-105"
             data-aos="fade-down"
             data-aos-delay="500"

@@ -63,7 +63,7 @@ const GallerySection = () => {
           <CircularGallery
             items={galleryItems}
             bend={3}
-            textColor="#29292A"
+            textColor="#ffffff"
             borderRadius={0.05}
             scrollEase={0.02}
           />
