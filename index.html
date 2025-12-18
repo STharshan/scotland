@@ -2,18 +2,47 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/tab.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="color-scheme" />
-    <title>Tune-it Scotland</title>
 
-    <!-- Set initial theme before app mounts to avoid flash -->
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Title -->
+    <title>Tune-it Scotland | Tuning & Performance Experts</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/tab.png" />
+    <link rel="apple-touch-icon" href="/tab.png" />
+
+    <!-- SEO -->
+    <meta
+      name="description"
+      content="Scotland’s trusted tuning & performance experts. ECU remapping, diagnostics, DPF, EGR, AdBlue solutions, servicing and repairs."
+    />
+
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tuneitscotland.co.uk/" />
+    <meta property="og:title" content="Tune-it Scotland | Tuning & Performance Experts" />
+    <meta
+      property="og:description"
+      content="Stage 1 remapping, diagnostics, DPF & EGR solutions. Trusted tuning specialists with 6+ years of experience."
+    />
+    <meta property="og:image" content="https://tuneitscotland.co.uk/tab.png" />
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tune-it Scotland | Tuning & Performance Experts" />
+    <meta
+      name="twitter:description"
+      content="Unlock performance or efficiency with professional ECU tuning and diagnostics."
+    />
+    <meta name="twitter:image" content="https://tuneitscotland.co.uk/tab.png" />
+
+    <!-- Theme preload (avoid flash) -->
     <script>
       (() => {
         const saved = localStorage.getItem("theme");
-
         if (!saved) {
-          // Default theme = dark
           localStorage.setItem("theme", "dark");
           document.documentElement.classList.add("dark");
         } else if (saved === "dark") {
