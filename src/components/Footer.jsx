@@ -117,10 +117,10 @@ const Footer = () => {
             <li className="flex items-center gap-3">
               <FaEnvelope className="text-[#004B93]" />
               <a
-                href="mailto:info@tuneitscotland.co.uk"
+                href="mailto:Tune-itscotland@hotmail.com"
                 className="hover:text-[#004B93] transition"
               >
-                info@tuneitscotland.co.uk
+                Tune-itscotland@hotmail.com
               </a>
             </li>
           </ul>

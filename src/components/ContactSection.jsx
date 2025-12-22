@@ -63,10 +63,10 @@ const ContactSection = () => {
             >
               <FaEnvelope className="text-[#004B93] text-lg" />
               <a
-                href="mailto:info@tuneitscotland.co.uk"
+                href="mailto:Tune-itscotland@hotmail.com"
                 className="font-medium hover:underline underline-offset-2"
               >
-                info@tuneitscotland.co.uk
+                Tune-itscotland@hotmail.com
               </a>
             </div>
           </div>

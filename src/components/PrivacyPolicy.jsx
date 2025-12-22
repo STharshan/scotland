@@ -111,7 +111,7 @@ const PrivacyPolicy = () => {
                     </p>
                     <div className="text-white">
                         <p><strong>Tune-it Scotland</strong></p>
-                        <p>Email: <a href="mailto:info@tuneitscotland.co.uk" className="text-[#4ab8e9] hover:underline">info@tuneitscotland.co.uk</a></p>
+                        <p>Email: <a href="mailto:Tune-itscotland@hotmail.com" className="text-[#4ab8e9] hover:underline">Tune-itscotland@hotmail.com</a></p>
                         <p>Phone: +44 7909 445101</p>
                         <p>Address: Unit B8, 15 Carmyle Ave, Glasgow G32 8HL, United Kingdom</p>
                     </div>
