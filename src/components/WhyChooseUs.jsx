@@ -9,12 +9,7 @@ const WhyChooseUs = () => {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      offset: 120,
-      once: true,
-      easing: 'ease-in-out',
-    });
+  
 
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();

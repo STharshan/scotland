@@ -1,19 +1,9 @@
 'use client';
 import React, { useEffect } from 'react';
 import { FaCarSide, FaCogs, FaArrowRight } from 'react-icons/fa';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
 
 const AboutTuneItScotland = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      offset: 100,
-      once: false,
-      mirror: true,
-      easing: 'ease-in-out'
-    });
-  }, []);
 
   return (
     <section

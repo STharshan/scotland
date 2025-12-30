@@ -1,19 +1,10 @@
 'use client';
 import React, { useEffect } from 'react';
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
 
 const ContactSection = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      offset: 120,
-      once: false,
-      mirror: true,
-      easing: 'ease-in-out',
-    });
-  }, []);
+
 
   return (
     <section

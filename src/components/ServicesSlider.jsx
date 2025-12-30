@@ -63,15 +63,7 @@ const services = [
 ];
 
 const ServicesSection = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      offset: 120,
-      once: false,
-      mirror: true,
-      easing: 'ease-in-out',
-    });
-  }, []);
+ 
 
   return (
     <section

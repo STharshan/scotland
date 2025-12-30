@@ -1,7 +1,6 @@
 'use client';
 import React, { useEffect } from 'react';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+
 import CircularGallery from '../components/CircularGallery';
 
 const galleryItems = [
@@ -16,14 +15,7 @@ const galleryItems = [
 ];
 
 const GallerySection = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      offset: 120,
-      once: true,
-      easing: 'ease-in-out',
-    });
-  }, []);
+
 
   return (
     <section
