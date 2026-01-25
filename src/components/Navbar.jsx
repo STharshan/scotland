@@ -31,6 +31,7 @@ const Navbar = () => {
           <img
             src="logo-removebg-preview.png"
             alt="Tune-It Scotland Logo"
+            loading="lazy"
             className="w-auto h-15 object-contain"
           />
         </a>

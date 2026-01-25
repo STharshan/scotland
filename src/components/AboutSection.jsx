@@ -91,6 +91,7 @@ const AboutTuneItScotland = () => {
             <img
               src="/about.jpg"
               alt="Mechanic tuning car engine"
+              loading="lazy"
               className="rounded-lg shadow-xl w-[90%] md:w-[85%] object-cover 
                          dark:shadow-neutral-900 transition-all duration-300"
               data-aos="zoom-in"
@@ -105,6 +106,7 @@ const AboutTuneItScotland = () => {
           <img
             src="/newcar.png"
             alt="Car diagnostic tools in use"
+            loading="lazy"
             className="absolute z-100 -top-6 right-4 w-32 md:w-36 lg:w-40
               
                        hidden sm:block transition-transform duration-300 hover:scale-105"
