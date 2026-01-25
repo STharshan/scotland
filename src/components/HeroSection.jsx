@@ -16,15 +16,17 @@ const Hero = () => {
     <main id='home' className="relative h-screen w-full flex flex-col justify-center items-center text-center text-white overflow-hidden">
 
       {/* Background Video */}
+      
       <video
+        className="absolute inset-0 w-full h-full object-cover"
+        src="/video.mp4"
         autoPlay
         loop
         muted
         playsInline
-        className="absolute inset-0 w-full h-full object-cover"
+        poster="/fall.png"
+        onError={(e) => (e.currentTarget.style.display = "none")}
       >
-        <source src="/video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
       </video>
 
       {/* Overlay */}
