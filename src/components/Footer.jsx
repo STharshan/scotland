@@ -1,9 +1,5 @@
-'use client';
-import React from 'react';
 import {
   FaFacebookF,
-  FaInstagram,
-  FaYoutube,
   FaMapMarkerAlt,
   FaPhoneAlt,
   FaEnvelope,
@@ -37,14 +33,13 @@ const Footer = () => {
         </div>
 
         {/* Quick Links */}
-        {/* Quick Links */}
         <div>
           <h3 className="text-white text-lg font-semibold mb-4 border-b border-[#004B93] inline-block pb-1">
             Quick Links
           </h3>
           <ul className="space-y-2 text-sm">
             <li>
-              <HashLink smooth to="/#home" className="hover:text-[#004B93] transition">
+              <HashLink smooth to="/#" className="hover:text-[#004B93] transition">
                 Home
               </HashLink>
             </li>

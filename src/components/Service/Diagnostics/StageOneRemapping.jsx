@@ -1,5 +1,3 @@
-"use client";
-
 import React, { useState, useEffect } from "react";
 import { Zap, TrendingUp, Gauge, Leaf, DollarSign } from "lucide-react";
 

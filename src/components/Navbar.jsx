@@ -1,7 +1,7 @@
-'use client';
-import React, { useState, useEffect } from 'react';
+
+import { useState, useEffect } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
-import ThemeToggle from '../components/ThemeToggle'; // ✅ import your toggle
+import ThemeToggle from '../components/ThemeToggle';
 import { HashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
@@ -38,7 +38,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden lg:flex items-center gap-8 font-semibold text-sm uppercase tracking-wide text-white dark:text-gray-200">
-          <HashLink to="/#home" className="hover:text-[#1E90FF] transition">
+          <HashLink to="/#" className="hover:text-[#1E90FF] transition">
             Home
           </HashLink>
           <HashLink to="/#about" className="hover:text-[#1E90FF] transition">
@@ -63,7 +63,7 @@ const Navbar = () => {
           {/* Theme Toggle */}
           <ThemeToggle />
 
-          {/* ✅ Desktop WhatsApp Button */}
+          {/*Desktop WhatsApp Button */}
           <a
             href="https://wa.me/447909445101"
             target="_blank"
@@ -118,7 +118,7 @@ const Navbar = () => {
       {isOpen && (
         <div className="lg:hidden bg-[#2B2B2B]/95 dark:bg-neutral-900 text-white dark:text-gray-200 text-center py-6 space-y-5 font-semibold uppercase tracking-wide transition-all duration-300">
           <HashLink
-            to="/#home"
+            to="/#"
             onClick={() => setIsOpen(false)}
             className="block hover:text-[#1E90FF]"
           >
@@ -160,7 +160,7 @@ const Navbar = () => {
             Contact
           </HashLink>
 
-          {/* ✅ Mobile WhatsApp Button */}
+          {/* Mobile WhatsApp Button */}
           <a
             to="https://wa.me/447909445101"
             target="_blank"

@@ -1,15 +1,11 @@
-'use client';
-import React, { useEffect, useState } from 'react';
+
+import { useEffect, useState } from 'react';
 import { FaHeart, FaTools, FaUserCheck, FaCogs } from 'react-icons/fa';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
 const WhyChooseUs = () => {
-  const [activeIndex, setActiveIndex] = useState(null);
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-  
 
     const checkMobile = () => setIsMobile(window.innerWidth < 768);
     checkMobile();
@@ -23,10 +19,6 @@ const WhyChooseUs = () => {
     { icon: <FaUserCheck />, title: 'Customer-First Approach' },
     { icon: <FaCogs />, title: 'Expert Knowledge, Real Results' },
   ];
-
-  const handleClick = (index) => {
-    if (isMobile) setActiveIndex(activeIndex === index ? null : index);
-  };
 
   return (
     <section

@@ -1,5 +1,4 @@
-'use client';
-import React, { useEffect } from 'react';
+
 import {
   FaTachometerAlt,
   FaTools,
@@ -9,13 +8,7 @@ import {
   FaCarBattery,
   FaFan,
 } from 'react-icons/fa';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
 
-const BLUE = "#1338BE";       // Tune-In Scotland Blue
-const DARK_GREY = "#29292A";
-const MID_GREY = "#454546";
-const LIGHT_GREY = "#777676";
 
 const services = [
   {

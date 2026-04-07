@@ -1,6 +1,3 @@
-'use client';
-import React, { useEffect } from 'react';
-
 import CircularGallery from '../components/CircularGallery';
 
 const galleryItems = [

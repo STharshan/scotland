@@ -1,5 +1,4 @@
-'use client';
-import React, { useEffect } from 'react';
+
 import { FaCarSide, FaCogs, FaArrowRight } from 'react-icons/fa';
 
 
